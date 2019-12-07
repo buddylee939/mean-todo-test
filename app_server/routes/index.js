@@ -1,8 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var ctrlMain = require('../controllers/main');
 
-/* GET home page. */
-router.get('/', ctrlMain.index);
+var ctrlStatic = require('../controllers/static');
+
+/* GET static pages. */
+router.get('/', ctrlStatic.index);
+router.get('/about', ctrlStatic.about);
 
 module.exports = router;
