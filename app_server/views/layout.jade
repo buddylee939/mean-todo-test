@@ -6,7 +6,12 @@ html
     link(rel='stylesheet', href='/bootstrap/css/united.css')
     link(rel='stylesheet', href='/stylesheets/style.css')    
   body
-    block content
+    include _includes/navbar
+    
+    .container
+      block content
+
+      include _includes/footer
   
     script(src='/javascripts/jquery-1.11.1.js')
     script(src='/bootstrap/js/bootstrap.min.js')
